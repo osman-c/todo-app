@@ -18,7 +18,7 @@ pnpm install
 ```
 
 ### Run database
-To initialize database, you will need docker-compose.
+To initialize the database, you will need docker-compose.
 
 ```bash
 docker-compose up -d
@@ -27,7 +27,8 @@ docker-compose up -d
 The database is now running.
 
 ### Apply migrations
-For application to function, tables are needed. Migrate tables.
+For the application to function, tables are needed. Migrate tables.
+
 With npm:
 ```bash
 npm run push
