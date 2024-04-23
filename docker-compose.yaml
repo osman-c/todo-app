@@ -1,0 +1,19 @@
+version: "1"
+services: 
+  db:
+    image: postgres:15.3-alpine
+    restart: always
+    volumes:
+      - ./data/db:/var/lib/posgresql/data
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_DB=db
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=123456
+
+  adminer:
+    image: adminer:4.8.1
+    restart: always
+    ports:
+      - 8080:8080
