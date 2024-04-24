@@ -233,7 +233,6 @@ export default function TodosPage({ initialTodos }: TodosPageProps) {
 
   const [allTags, setAllTags] = useState<SelectedTag[]>(handleTags([]));
   const [filterValue, setFilterValue] = useState("");
-  // const [filtered, setFiltered] = useState(todos);
 
   function handleTags(initial: SelectedTag[]) {
     const tags = initial.map((t) => t.tag);
@@ -315,7 +314,7 @@ export default function TodosPage({ initialTodos }: TodosPageProps) {
         return false;
       }
 
-      if (!todo.content.includes(filterValue)) {
+      if (!todo.content.toLowerCase().includes(filterValue.toLowerCase())) {
         return false;
       }
 
